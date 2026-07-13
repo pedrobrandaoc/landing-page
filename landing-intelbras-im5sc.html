@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intelbras iM5 SC | Câmera Inteligente para sua Casa</title>
+<meta name="description" content="Conheça a Intelbras iM5 SC: visão noturna colorida, detecção inteligente de movimento e monitoramento em tempo real pelo app.">
+
+<!-- ============================================================
+     🔵 PIXEL DO META (FACEBOOK/INSTAGRAM) — COLE O SCRIPT AQUI
+     Substitua SEU_PIXEL_ID pelo ID numérico do seu Pixel.
+     Instruções completas no final da resposta do Claude.
+     ============================================================ -->
+<!--
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'SEU_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
+/></noscript>
+-->
+<!-- FIM DO ESPAÇO DO PIXEL -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['"Open Sans"', 'system-ui', 'sans-serif'] },
+        colors: {
+          ink:   '#0D1117',
+          panel: '#161B22',
+          paper: '#F7F7F5',
+          muted: '#6B7280',
+          cyan:  '#3AA1FF',
+          cta:   '#FF7A1A',
+          ctadark: '#E0670C',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Open Sans', system-ui, sans-serif; }
+
+  @keyframes recpulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255,90,90,0.55); }
+    50% { box-shadow: 0 0 0 6px rgba(255,90,90,0); }
+  }
+  .rec-dot { animation: recpulse 1.8s ease-in-out infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .rec-dot { animation: none; }
+    * { transition: none !important; animation-duration: 0.001ms !important; }
+  }
+
+  :focus-visible {
+    outline: 2px solid #3AA1FF;
+    outline-offset: 3px;
+  }
+
+  /* Cantos de viewfinder — o elemento assinatura da página */
+  .frame-corner { position: absolute; width: 28px; height: 28px; }
+  .frame-corner.tl { top: -10px; left: -10px; border-top: 3px solid #3AA1FF; border-left: 3px solid #3AA1FF; }
+  .frame-corner.tr { top: -10px; right: -10px; border-top: 3px solid #3AA1FF; border-right: 3px solid #3AA1FF; }
+  .frame-corner.bl { bottom: -10px; left: -10px; border-bottom: 3px solid #3AA1FF; border-left: 3px solid #3AA1FF; }
+  .frame-corner.br { bottom: -10px; right: -10px; border-bottom: 3px solid #3AA1FF; border-right: 3px solid #3AA1FF; }
+</style>
+</head>
+
+<body class="bg-paper text-ink antialiased">
+
+<!-- ================= HEADER ================= -->
+<header class="fixed top-0 inset-x-0 z-50 bg-ink/80 backdrop-blur-md">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <span class="text-paper font-semibold tracking-wide text-sm">INTELBRAS <span class="text-cyan">iM5 SC</span></span>
+    <a href="#comprar" class="hidden sm:inline-block text-paper/80 hover:text-paper text-sm font-semibold transition-colors">Ver oferta →</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="relative bg-ink text-paper pt-32 pb-24 px-6 overflow-hidden">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+    <div>
+      <div class="inline-flex items-center gap-2 rounded-full bg-panel px-3 py-1 mb-6">
+        <span class="w-2 h-2 rounded-full bg-red-500 rec-dot"></span>
+        <span class="text-xs font-semibold tracking-widest text-paper/70 uppercase">Monitoramento ao vivo</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-800 font-extrabold leading-[1.05] tracking-tight mb-6">
+        Sua casa,<br class="hidden sm:block"> vigiada com clareza.
+      </h1>
+
+      <p class="text-lg text-paper/70 font-light max-w-md mb-10 leading-relaxed">
+        A Intelbras iM5 SC enxerga o que importa: cores mesmo à noite, movimento em tempo real e um app simples que cabe no seu bolso.
+      </p>
+
+      <a href="#comprar"
+         id="cta-compra"
+         data-affiliate-url="COLE_AQUI_SEU_LINK_DE_AFILIADO_MERCADO_LIVRE"
+         target="_blank" rel="noopener sponsored"
+         class="inline-flex items-center gap-2 bg-cta hover:bg-ctadark text-white font-semibold text-base px-8 py-4 rounded-full transition-colors shadow-lg shadow-cta/20">
+        Comprar agora no Mercado Livre
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </a>
+      <p class="text-xs text-paper/40 mt-4">Frete e garantia oficial via Mercado Livre.</p>
+    </div>
+
+    <div class="relative mx-auto max-w-sm">
+      <div class="relative rounded-3xl bg-panel p-10">
+        <div class="frame-corner tl"></div>
+        <div class="frame-corner tr"></div>
+        <div class="frame-corner bl"></div>
+        <div class="frame-corner br"></div>
+        <img src="/camera.png"
+             alt="Câmera inteligente Intelbras iM5 SC"
+             class="w-full h-auto rounded-xl">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= DIFERENCIAIS ================= -->
+<section class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <p class="text-cyan text-sm font-semibold tracking-widest uppercase mb-3 text-center">Por que ela</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-16 tracking-tight">Feita para o que realmente importa</h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <div class="text-center px-4">
+        <div class="w-14 h-14 mx-auto mb-6 rounded-2xl bg-ink flex items-center justify-center">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3AA1FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg mb-3">Visão noturna colorida</h3>
+        <p class="text-muted font-light leading-relaxed">Mesmo no escuro, a iM5 SC preserva as cores da cena — nada de imagens em preto e branco difíceis de interpretar.</p>
+      </div>
+
+      <div class="text-center px-4">
+        <div class="w-14 h-14 mx-auto mb-6 rounded-2xl bg-ink flex items-center justify-center">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3AA1FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg mb-3">Detecção inteligente</h3>
+        <p class="text-muted font-light leading-relaxed">Reconhece movimento real e envia alertas na hora certa, sem encher seu celular de notificações inúteis.</p>
+      </div>
+
+      <div class="text-center px-4">
+        <div class="w-14 h-14 mx-auto mb-6 rounded-2xl bg-ink flex items-center justify-center">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3AA1FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12h8M8 16h5"/></svg>
+        </div>
+        <h3 class="font-semibold text-lg mb-3">Gravação segura</h3>
+        <p class="text-muted font-light leading-relaxed">Armazene localmente em cartão microSD ou na nuvem, e reveja qualquer momento direto pelo app.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ESPECIFICAÇÕES ================= -->
+<section class="py-24 px-6 bg-panel/[0.03]">
+  <div class="max-w-4xl mx-auto">
+    <p class="text-cyan text-sm font-semibold tracking-widest uppercase mb-3 text-center">Ficha técnica</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-16 tracking-tight">Especificações</h2>
+
+    <div class="grid sm:grid-cols-2 gap-x-16 gap-y-8">
+      <div class="flex justify-between border-b border-ink/10 pb-4">
+        <span class="text-muted font-light">Resolução</span>
+        <span class="font-semibold">Full HD</span>
+      </div>
+      <div class="flex justify-between border-b border-ink/10 pb-4">
+        <span class="text-muted font-light">Conexão</span>
+        <span class="font-semibold">Wi-Fi 2,4 GHz</span>
+      </div>
+      <div class="flex justify-between border-b border-ink/10 pb-4">
+        <span class="text-muted font-light">Visão noturna</span>
+        <span class="font-semibold">Colorida</span>
+      </div>
+      <div class="flex justify-between border-b border-ink/10 pb-4">
+        <span class="text-muted font-light">Áudio</span>
+        <span class="font-semibold">Bidirecional</span>
+      </div>
+      <div class="flex justify-between border-b border-ink/10 pb-4">
+        <span class="text-muted font-light">Armazenamento</span>
+        <span class="font-semibold">MicroSD / Nuvem</span>
+      </div>
+      <div class="flex justify-between border-b border-ink/10 pb-4">
+        <span class="text-muted font-light">App</span>
+        <span class="font-semibold">iOS e Android</span>
+      </div>
+    </div>
+    <p class="text-xs text-muted/70 mt-8 text-center">Confira as especificações oficiais completas na página do produto antes de publicar.</p>
+  </div>
+</section>
+
+<!-- ================= CTA FINAL ================= -->
+<section id="comprar" class="py-24 px-6 bg-ink text-paper text-center">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">Pronto para ver com clareza?</h2>
+    <p class="text-paper/60 font-light mb-10">Garanta a sua Intelbras iM5 SC com entrega e garantia oficial pelo Mercado Livre.</p>
+    <a href="https://meli.la/16D8uwg"
+       data-cta-mirror="true"
+       target="_blank" rel="noopener sponsored"
+       class="inline-flex items-center gap-2 bg-cta hover:bg-ctadark text-white font-semibold text-base px-8 py-4 rounded-full transition-colors shadow-lg shadow-cta/20">
+      Comprar agora no Mercado Livre
+    </a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="py-10 px-6 bg-panel text-paper/50 text-sm">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+    <span>© 2026 — Conteúdo independente sobre Intelbras iM5 SC.</span>
+    <div class="flex gap-6">
+      <a href="#" class="hover:text-paper transition-colors">Política de Privacidade</a>
+      <a href="#" class="hover:text-paper transition-colors">Contato</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     🔵 EVENTO 'ViewContent' — DISPARA LOGO APÓS O CARREGAMENTO
+     ============================================================ -->
+<script>
+  window.addEventListener('load', function () {
+    if (typeof fbq === 'function') {
+      fbq('track', 'ViewContent', {
+        content_name: 'Intelbras iM5 SC',
+        content_category: 'Câmeras de Segurança',
+        currency: 'BRL'
+        // value: 0.00 // opcional: preencha com o preço se quiser rastrear valor
+      });
+    }
+  });
+</script>
+<!-- FIM DO ESPAÇO DO EVENTO ViewContent -->
+
+<!-- ============================================================
+     🔵 RASTREAMENTO DE CONVERSÃO NO BOTÃO DE CTA
+     Dispara 'InitiateCheckout' quando o usuário clica para sair
+     para o Mercado Livre, e só então redireciona.
+     ============================================================ -->
+<script>
+  (function () {
+    var ctaButtons = document.querySelectorAll('#cta-compra, [data-cta-mirror="true"]');
+
+    ctaButtons.forEach(function (btn) {
+      btn.addEventListener('click', function (event) {
+        var destino = document.getElementById('cta-compra').getAttribute('data-affiliate-url');
+
+        // Se o link ainda não foi preenchido, não bloqueia o clique — só avisa no console.
+        if (!destino || destino.indexOf('COLE_AQUI') !== -1) {
+          console.warn('Lembrete: cole seu link de afiliado do Mercado Livre no atributo data-affiliate-url do botão #cta-compra.');
+          return;
+        }
+
+        event.preventDefault();
+
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout', {
+            content_name: 'Intelbras iM5 SC',
+            content_category: 'Câmeras de Segurança',
+            currency: 'BRL'
+          });
+        }
+
+        // Pequeno atraso para dar tempo do evento ser enviado antes de sair da página.
+        setTimeout(function () {
+          window.open(destino, '_blank', 'noopener');
+        }, 250);
+      });
+    });
+  })();
+</script>
+<!-- FIM DO ESPAÇO DE RASTREAMENTO -->
+
+</body>
+</html>
